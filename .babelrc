@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "transform-runtime",
+    "angularjs-annotate",
+    "transform-async-to-generator",
+    "syntax-async-functions"
+  ],
+  "presets": ["latest", "stage-0"]
+}

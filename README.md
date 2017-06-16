@@ -1,4 +1,4 @@
-# Melon CRM Frontend
+# Skypicker Client
 
 To install dependencies use `npm install` or `yarn install` - yarn is preferable over npm!
 

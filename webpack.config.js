@@ -97,7 +97,8 @@ module.exports = function makeWebpackConfig() {
 
   config.devServer = {
     contentBase: __dirname + '/client',
-    stats: 'minimal'
+    stats: 'minimal',
+    hot: true
   };
   return config;
 }();

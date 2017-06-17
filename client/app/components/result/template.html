@@ -1,0 +1,18 @@
+<div class="result col-md-3 col-sm-4 col-xs-12">
+  <div>
+    <strong>{{ $ctrl.data.cityFrom }} ({{ $ctrl.data.flyFrom }})</strong>
+    <i class="fa fa-long-arrow-right"></i>
+    <strong>{{ $ctrl.data.cityTo }} ({{ $ctrl.data.flyTo }})</strong>
+  </div>
+  <div>
+    <div>
+      Departure: {{ $ctrl.normalizeDate($ctrl.data.dTimeUTC) }} <br>
+      Arrival: {{ $ctrl.normalizeDate($ctrl.data.aTimeUTC) }}
+    </div>
+    <div>
+      <span><i class="fa fa-clock-o"></i> {{ $ctrl.data.fly_duration }}</span>
+      <span><i class="fa fa-eur"></i> {{ $ctrl.data.price }}</span>
+    </div>
+  </div>
+  <hr>
+</div>

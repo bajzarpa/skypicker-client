@@ -11,10 +11,17 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.4",
+    "angular-sanitize": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "flatpickr": "^3.0.5-1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
     "lodash": "^4.17.4",
+    "moment": "^2.18.1",
     "normalize.css": "^3.0.3",
     "rupture": "^0.6.2",
-    "toastr": "^2.1.2"
+    "toastr": "^2.1.2",
+    "ui-select": "^0.19.8"
   },
   "devDependencies": {
     "babel-core": "^6.7.7",

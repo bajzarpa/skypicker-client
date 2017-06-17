@@ -1,6 +1,26 @@
+@import '~bootstrap/dist/css/bootstrap.css'
 @import "~rupture/rupture/index.styl"
-@import "~bulma/css/bulma.css"
-@import "~font-awesome/css/font-awesome.css"
+@import '~font-awesome/css/font-awesome.css'
+@import '~flatpickr/dist/flatpickr.css'
+@import '~flatpickr/dist/themes/light.css'
+@import '~ui-select/dist/select.css'
+@import '~toastr/build/toastr.css'
 
-body
-  border: 0
+*
+  box-sizing: border-box
+
+  &:after
+  &:before
+    box-sizing: border-box
+
+.loading
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  background: rgba(white, .6)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 100

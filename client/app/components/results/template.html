@@ -1,0 +1,11 @@
+<div class="search-results">
+  <div ng-if="!$ctrl.results.data.data.length">
+    <h3 class="text-muted text-center">Search for places</h3>
+  </div>
+  <div ng-if="$ctrl.results.data._results === 0" class="text-center text-danger">
+    <p>No results for your criteria</p>
+  </div>
+  <div ng-if="$ctrl.results.data.data.length">
+    <search-result ng-repeat="result in $ctrl.results.data.data" data="result"></search-result>
+  </div>
+</div>

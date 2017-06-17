@@ -1,0 +1,28 @@
+<div class="search-form">
+  <form ng-submit="$ctrl.onSearchSubmit()">
+    <div class="group">
+      <div class="input">
+        <ui-select ng-model="$ctrl.flightDetails.flyFrom" reset-search-input="false" title="From" required>
+          <ui-select-match placeholder="From">{{ $select.selected.value }}</ui-select-match>
+          <ui-select-choices repeat="place in $ctrl.places track by $index" refresh="$ctrl.onPlaceSearch($select.search)" refresh-delay="0">
+            <div ng-bind-html="place.value | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div>
+      <div class="input">
+        <ui-select ng-model="$ctrl.flightDetails.flyTo" reset-search-input="false" title="To" required>
+          <ui-select-match placeholder="To">{{ $select.selected.value }}</ui-select-match>
+          <ui-select-choices repeat="place in $ctrl.places track by $index" refresh="$ctrl.onPlaceSearch($select.search)" refresh-delay="0">
+            <div ng-bind-html="place.value | highlight: $select.search"></div>
+          </ui-select-choices>
+        </ui-select>
+      </div>
+    </div>
+    <div class="group">
+      <div class="input">
+        <input class="form-control date-range" type="text" placeholder="Select departure and return dates" required  ng-model="$ctrl.flightDetails.displayDate">
+      </div>
+    </div>
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+</div>

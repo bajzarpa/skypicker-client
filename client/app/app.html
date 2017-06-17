@@ -1,3 +1,7 @@
 <div class="app-container">
-  Hello World
+  <div class="loading text-muted" ng-if="$ctrl.loading">
+    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+  </div>
+  <search-form></search-form>
+  <search-results results="$ctrl.results"></search-results>
 </div>

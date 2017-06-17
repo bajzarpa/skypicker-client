@@ -1,11 +1,11 @@
 /*global __PROCESS__*/
 export default function () {
-  const BACKEND_URL = 'https://api.skypicker.com/';
-  const API_URL = `${BACKEND_URL}/flights`;
+  const FLIGHTS_URL = 'https://api.skypicker.com/flights';
+  const PLACES_URL = 'https://api.skypicker.com/places';
 
   return {
-    backendUrl: BACKEND_URL,
-    apiUrl: API_URL,
+    flightsApiUrl: FLIGHTS_URL,
+    placesApiUrl: PLACES_URL,
     isDev: __PROCESS__.ENV === 'development'
   }
 }

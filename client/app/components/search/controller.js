@@ -32,6 +32,11 @@ export default class SearchController {
     })
   }
 
+  /**
+   * @description Helper function to the datepicker. Set's the selected dates into our model
+   * @param {Array} dates
+   * @private
+   */
   _onDatepickerChange(dates) {
     const FROM_ARRAY_INDEX = 0;
     const TO_ARRAY_INDEX = 1;
@@ -54,6 +59,10 @@ export default class SearchController {
      this.flightDetails.flyTo !== ''
   }
 
+  /**
+   * @description Eventlistener of the place search inpots
+   * @param {String} keyword
+   */
   onPlaceSearch(keyword) {
     const MIN_KEYWORD_LENGTH = 3;
 
@@ -67,6 +76,11 @@ export default class SearchController {
       .catch(() => SearchController._onPlaceSearchError())
   }
 
+  /**
+   * @description Fire this method when the place search was successful, and fill the model
+   * @param {Array} data
+   * @private
+   */
   _onPlaceSearchSuccess(data) {
     this.places = data;
   }

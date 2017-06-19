@@ -13,6 +13,9 @@ export default class AppController {
   }
 
   eventListeners() {
+    /**
+     * Subscribe to flighSearch service
+     */
     this._$scope.$on('flightsearch:results-available', () => this._onFlightResultsAvailable());
     this._$scope.$on('flightsearch:request-sent', () => this._onFlightSearchRequestSent());
   }

@@ -6,6 +6,12 @@ export default angular
     let flights = [];
     let requestPending = false;
 
+    /**
+     * @description When the request wass successfull set the data
+     *              into our model and then broadcast that for subscribers
+     * @param {Object} data - API response
+     * @private
+     */
     let _onSearchSuccess = data => {
       flights = data;
       requestPending = false;
@@ -16,6 +22,14 @@ export default angular
     let _onSearchError = () =>
       toastr.error('There were an error while communicating with server. Please try again later');
 
+    /**
+     * @description Get the available fligts from the SkyPicker's API
+     * @param {Object}  params             - Search parameters object
+     * @param {String}  params.flyFrom.id  - The id of the selected departure airport
+     * @param {String}  params.flyTo.id    - The id of the selected arrival airport
+     * @param {Date}    params.dateFrom    - Departure time
+     * @param {Date}    params.dateTo      - Departure time
+     */
     let search = (params = {}) => {
       if (requestPending) {
         return;
